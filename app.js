@@ -7,6 +7,10 @@ app.get('/', (req, res)=>{
 	res.status(200).json(responseData);
 });
 
+app.get('/categories', (req, res)=>{
+	const responseData = {message : 'Hello from categories page!'};
+	res.status(200).json(responseData);
+});
 app.listen(port, ()=>{
 	console.log(`pc_marketplace is running on http://localhost${port}`)
 })
