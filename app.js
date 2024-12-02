@@ -1,6 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 4000;
+
+app.use(cors());
 
 app.get('/', (req, res)=>{
 	const responseData = {message : 'Hello from pc_marketplace!:)'};
