@@ -3,6 +3,8 @@ const cors = require('cors');
 const app = express();
 const port = 4000;
 
+const categories = require('./categories');
+
 app.use(cors());
 
 app.get('/', (req, res)=>{
@@ -12,6 +14,7 @@ app.get('/', (req, res)=>{
 
 app.get('/categories', (req, res)=>{
 	const responseData = {message : 'Hello from categories page!'};
+	responseData.categories = categories
 	res.status(200).json(responseData);
 });
 
